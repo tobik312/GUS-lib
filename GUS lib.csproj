@@ -1,13 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageId>GUS.lib</PackageId>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>0.1</Version>
-    <Authors>Tobiasz Wilhelm</Authors>
-    <Product>GUS lib</Product>
-    <Description>Native .NET standard GUS library for REGON api</Description>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <RootNamespace>GUS_lib</RootNamespace>
   </PropertyGroup>
 
