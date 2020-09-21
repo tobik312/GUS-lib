@@ -22,7 +22,9 @@ Jest zgodna z .NET standard, więc można jej używać niezależnie od platformy
   - [x] komunikaty usługi
   - [x] komunikaty/kody informacyjne
 ### Instalacja
-Pakiet NuGet `Pakiet NuGet będzie dostępny później`
+Pakiet NuGet `Install-Package GUS.lib`
+\
+https://www.nuget.org/packages/GUS.lib
 ### Dokumentacja
 Dokumentacja zawierająca szczgółowy opis interfejsu API dostępny jest na stronie
 \
