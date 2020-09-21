@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>GUS.lib</PackageId>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -8,6 +9,10 @@
     <Authors>Tobiasz Wilhelm</Authors>
     <Product>GUS lib</Product>
     <Description>Native .NET standard GUS library for REGON api</Description>
+    <Copyright>Copyright 2020 © Tobiasz Wilhelm. All rights reserved.</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/tobik312/GUS-lib</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
     <RootNamespace>GUS_lib</RootNamespace>
   </PropertyGroup>
 
