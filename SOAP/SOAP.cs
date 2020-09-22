@@ -14,7 +14,12 @@ namespace GUS_lib.Utils{
 
         private readonly HttpClient client = new HttpClient();
         public string apiUrl{get;set;}
-        public string actionUrl{get;set;}
+        public string actionUrl{
+            get => client.BaseAddress.ToString();
+            set{
+                client.BaseAddress = new Uri(value);
+            }
+        }
         public string sid{
             set{
                 if(client!=null){
