@@ -31,7 +31,8 @@ Dokumentacja zawierająca szczgółowy opis interfejsu API dostępny jest na str
 https://api.stat.gov.pl/Home/RegonApi
 \
 \
-Dokumentacja biblioteki: `będzie dostępna później`
+Dokumentacja biblioteki jest dostępna w zakładce 
+https://github.com/tobik312/GUS-lib/wiki
 ### Licencja
 Prawa autorskie do kodu należą do Tobiasza Wilhelm (tobik312).\
 Kod wydany jest na licencji MIT.
