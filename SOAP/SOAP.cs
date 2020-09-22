@@ -13,7 +13,14 @@ namespace GUS_lib.Utils{
     public class SOAP{
 
         private readonly HttpClient client = new HttpClient();
-        public string apiUrl{get;set;}
+        public string apiUrl{
+            get{
+                return client.BaseAddress.ToString();
+            }
+            set{
+                client.BaseAddress = new Uri(value);
+            }
+        }
         public string actionUrl{get;set;}
         public string sid{
             set{
@@ -27,7 +34,6 @@ namespace GUS_lib.Utils{
         public SOAP(string endpointUrl,string actionUrl){
             this.apiUrl = endpointUrl;
             this.actionUrl = actionUrl;
-            client.BaseAddress = new Uri(endpointUrl);
             client.DefaultRequestHeaders.Accept.Clear();  
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/xop+xml")
@@ -42,6 +48,7 @@ namespace GUS_lib.Utils{
                 if(customActionUrl==null) customActionUrl = actionUrl;
                 string action = typeof(ReqType).Name;
                 Envelope<ReqType> envelope = new Envelope<ReqType>(customActionUrl+action,apiUrl,requestData);
+                Console.WriteLine(envelope.serializeSOAP());
                 StringContent httpContext = new StringContent(envelope.serializeSOAP(),Encoding.UTF8,"application/soap+xml");
 
                 HttpResponseMessage response = client.PostAsync("",httpContext).Result;
@@ -61,6 +68,7 @@ namespace GUS_lib.Utils{
                         }
                     if(writer!=null){
                         writer.Write(line);
+                        Console.WriteLine(line);
                     }
                 }
                 writer.Flush();

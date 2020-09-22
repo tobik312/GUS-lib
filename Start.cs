@@ -10,7 +10,7 @@ namespace GUS_lib{
             GUS gusClient = new GUS("abcde12345abcde12345",true);
             try{
                 gusClient.Login();
-                var a = gusClient.GetValue(GetValueType.StanDanych);
+                var a = (IStatusUslugi) gusClient.GetValue(GetValueType.StatusUslugi);
                 Console.WriteLine(a.Result);
             }catch(GUSException e){
                 Console.WriteLine(e.Message);
