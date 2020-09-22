@@ -32,7 +32,6 @@ namespace GUS_lib.Utils{
         public SOAP(string endpointUrl,string actionUrl){
             this.apiUrl = endpointUrl;
             this.actionUrl = actionUrl;
-            client.BaseAddress = new Uri(endpointUrl);
             client.DefaultRequestHeaders.Accept.Clear();  
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/xop+xml")
