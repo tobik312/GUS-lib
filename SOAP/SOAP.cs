@@ -13,13 +13,13 @@ namespace GUS_lib.Utils{
     public class SOAP{
 
         private readonly HttpClient client = new HttpClient();
-        public string apiUrl{get;set;}
-        public string actionUrl{
+        public string apiUrl{
             get => client.BaseAddress.ToString();
             set{
                 client.BaseAddress = new Uri(value);
             }
         }
+        public string actionUrl{get;set;}
         public string sid{
             set{
                 if(client!=null){
