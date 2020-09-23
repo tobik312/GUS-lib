@@ -9,7 +9,6 @@ namespace GUS_lib{
         public static void Main(string[] args){
             GUS gusClient = new GUS("abcde12345abcde12345",true);
             try{
-                gusClient.Login();
                 var a = (IStatusUslugi) gusClient.GetValue(GetValueType.StatusUslugi);
                 Console.WriteLine(a.Result);
             }catch(GUSException e){
