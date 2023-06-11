@@ -10,7 +10,7 @@ namespace GUS_lib{
         GetValueResponse GetValue(GetValueType type);
         Podmiot SzukajPodmiot(string nip,string regon,string krs);
         List<Podmiot> SzukajPodmioty(string[] nipy,string[] regony9,string[] regony14,string[] krsy);
-        Podmiot SzukajPodmiotNIP(string nip);
+        Podmiot SzukajPodmiotNip(string nip);
         Podmiot SzukajPodmiotRegon(string regon);
         Podmiot SzukajPodmiotKrs(string krs);
         List<Podmiot> SzukajPodmiotyNip(params string[] nipy);
