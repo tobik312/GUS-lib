@@ -14,6 +14,6 @@ namespace GUS_lib.Models{
         public string NrLokalu{get;set;}
         public char Typ{get;set;}
         public SilosType SilosID{get;set;}
-        //public DateTime DataZakonczeniaDzialalnosci{get;set;}
+        public string DataZakonczeniaDzialalnosci{get;set;}
     }
 }

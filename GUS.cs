@@ -104,16 +104,16 @@ namespace GUS_lib{
             return soapClient.getData<DaneSzukajPodmioty,DaneSzukajPodmiotyResponse>(
                 new DaneSzukajPodmioty(){
                     pParametryWyszukiwania = new ParametryWyszukiwania(){
-                        Regon9zn = String.Join(",",regony9),
-                        Regon14zn = String.Join(",",regony14),
-                        Nipy = String.Join(",",nipy),
-                        Krsy = String.Join(",",krsy)
+                        Regon9zn = regony9 == null ? "" : String.Join(",",regony9),
+                        Regon14zn = regony14 == null ? "" : String.Join(",",regony14),
+                        Nipy = nipy == null ? "" : String.Join(",",nipy),
+                        Krsy = krsy == null ? "" : String.Join(",",krsy)
                     }
                 }
             );
         }
 
-        public Podmiot SzukajPodmiotNIP(string nip) => SzukajPodmiot(nip);
+        public Podmiot SzukajPodmiotNip(string nip) => SzukajPodmiot(nip);
         public Podmiot SzukajPodmiotRegon(string regon) => SzukajPodmiot(null,regon);
         public Podmiot SzukajPodmiotKrs(string krs) => SzukajPodmiot(null,null,krs);
         public List<Podmiot> SzukajPodmiotyNip(params string[] nipy) => SzukajPodmioty(nipy);
