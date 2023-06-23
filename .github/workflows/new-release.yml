@@ -49,7 +49,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build_files
-          path: ${{ env.NuGetDirectory }}
+          path: ./bin
       
       - name: Create package
         run: dotnet pack --configuration Release --output ./nupkg
