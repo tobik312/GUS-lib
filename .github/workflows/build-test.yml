@@ -10,7 +10,7 @@ on:
     - master
 
 jobs:
-  create_nuget:
+  build_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
