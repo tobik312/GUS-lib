@@ -1,0 +1,29 @@
+name: Build & test package
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+    
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 3.1.x
+
+      - name: Restore project
+        run: dotnet restore
+
+      - name: Build package
+        run: dotnet build --configuration Release --no-restore
+        
+      #TODO: - name: Test package 
